@@ -1,5 +1,5 @@
 pipeline{
-    agents any
+    agent any
     environment{
         imageName = 'vishnus5/demo'
         registryCredentialSet = 'dockerhub'
