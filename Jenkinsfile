@@ -8,7 +8,9 @@ pipeline{
     stages{
 
         stage('Clone Repo'){
-            git([url: 'https://github.com/vishnu721/demo.git', branch: 'main'])
+            steps{
+                git([url: 'https://github.com/vishnu721/demo.git', branch: 'main'])
+            }            
         }
 
         stage('Build Docker Image'){
