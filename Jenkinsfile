@@ -39,7 +39,11 @@ pipeline{
             steps{
                 echo 'Deploying to Kubernetes'
                 script{
-                  
+                  kubernetesDeploy(
+                    configs: 'deployment.yml',
+                    kubeconfigId: 'kubeconfig',
+                    enableConfigSubstitution: true
+                    ) 
                 }
             }
         }
